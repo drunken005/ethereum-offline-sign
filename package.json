@@ -1,0 +1,25 @@
+{
+  "name": "ethereum-offline-sign",
+  "version": "1.0.0",
+  "description": "Sign the ETH smart contract transaction offline",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha lib/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drunken005/ethereum-offline-sign.git"
+  },
+  "keywords": [
+    "Ethereum",
+    "Coinxp",
+    "Contract",
+    "Signature"
+  ],
+  "author": "drunken",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drunken005/ethereum-offline-sign/issues"
+  },
+  "homepage": "https://github.com/drunken005/ethereum-offline-sign#readme"
+}
