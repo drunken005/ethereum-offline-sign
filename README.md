@@ -91,6 +91,7 @@ var params = [
 //Sign deploy contract offline, return signed transaction data in HEX format
 var sigTx = etherSigner.contractTransferSign('withdrawToDest', params, relayAddress, nonce, 0);
 web3.eth.sendRawTransaction(sigTx);
+
 ```
 
 
