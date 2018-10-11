@@ -1,5 +1,8 @@
 # Ethereum offline sign
-Sign the ETH smart contract transaction offline
+Ethereum transaction offline signature tool
+
+## About
+Sign offline for the ETH transaction and smart contract call message transaction, return transaction data in HEX format. This allows you full control over your account's private key without having to unlock it at the ethereum node
 
 ## Get Started
 ```bash
@@ -9,8 +12,9 @@ npm install ethereum-offline-sign --save
 ```bash
 npm test
 ```
-### APIS
-#### transferSign(nonce, to, value) `Ordinary transactions are signed offline`
+## APIS
+#### `transferSign(nonce, to, value) Ordinary transactions are signed offline`
+##### Inputs
  * `nonce` Sender nonce
  * `to` The destination address of the message, left undefined for a contract-creation transaction.
  * `value` The value transferred for the transaction in Wei
@@ -30,12 +34,14 @@ var gasPrice = web3.eth.gasPrice,
     
 //Instantiation EtherSigner
 var etherSigner = new EtherSigner(null, senderPrivateKey, gasPrice, gasLimit);
+
 //Sign transactions offline, return signed transaction data in HEX format
 var sigTx = etherSigner.transferSign(nonce, destination, value);
 web3.eth.sendRawTransaction(sigTx);
 ```
 
-#### deployContractSign(contract, arguments, nonce) `Sign the deployed contracts`
+#### `deployContractSign(contract, arguments, nonce) Sign the deployed contracts`
+##### Inputs
  * `contract` Contains contract instances of the abi, eg:web3.eth.contract(Contract.abi);
  * `arguments` Contract constructor parameters, Type array
  * `nonce` Contract creator nonce
@@ -59,7 +65,8 @@ var sigTx = etherSigner.deployContractSign(contract, params, nonce);
 web3.eth.sendRawTransaction(sigTx);
 ```
 
-#### contractTransferSign(method, arguments, to, nonce, value) `Sign the contract function call`
+#### `contractTransferSign(method, arguments, to, nonce, value) Sign the contract function call`
+##### Inputs
  * `method` Contract function
  * `arguments` Contract function args, Type array
  * `to` Contract address
