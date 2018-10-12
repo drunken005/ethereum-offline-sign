@@ -1,6 +1,6 @@
 {
   "name": "ethereum-offline-sign",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sign the ETH smart contract transaction offline",
   "main": "lib/index.js",
   "scripts": {

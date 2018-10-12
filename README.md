@@ -95,7 +95,16 @@ web3.eth.sendRawTransaction(sigTx);
 ```
 
 
+#### `getAddress()`
+##### Return value
+Returns the ethereum address of a current private key
 
+Example:
+```bash
+
+etherSigner.getAddress()
+// 0x01bf9878a7099b2203838f3a8e7652ad7b127a26
+```
 
 
 
